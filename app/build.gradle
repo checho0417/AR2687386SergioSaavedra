@@ -4,18 +4,20 @@ plugins {
     // Add the Google services Gradle plugin
     id("com.google.gms.google-services")
     //add hilt to dependency injection
-    kotlin("kapt")
     id("com.google.dagger.hilt.android")
 }
 
+// Config from ´plugin
+apply plugin: 'kotlin-kapt'
+
 android {
     namespace 'sena.edu.ar2687386sergiosaavedra'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "sena.edu.ar2687386sergiosaavedra"
         minSdk 27
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
